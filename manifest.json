@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "ZLT-S10G Admin Tool v1.0",
+  "description": "Unlock Hidden features for ZLT-S10G",
+  "version": "1.0.1",
+  "icons": { "128": "icon128.png" },
+  "browser_action": {
+    "default_icon": "icon128.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://192.168.254.254/index.html?t=*"],
+      "js": ["/resources/scripts/jquery.js", "/scripts/content.js"]
+    }
+  ],
+  "web_accessible_resources": ["/resources/images/*"]
+}
